@@ -4,10 +4,11 @@
     <Authors>Aprismatic</Authors>
     <Company>Aprismatic</Company>
     <Copyright>(c) Aprismatic Pte. Ltd. All rights reserved.</Copyright>
-    <Version>0.0.0.0</Version>
+    <PackageIconUrl>https://i.ibb.co/0rWbsLw/aprismatic-weave.png</PackageIconUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/aprismatic/weave-commons</PackageProjectUrl>
-    <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/aprismatic/weave-commons.git</RepositoryUrl>
+    <Version>0.0.0.0</Version>
   </PropertyGroup>
 
 </Project>
