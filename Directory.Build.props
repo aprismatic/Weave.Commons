@@ -1,10 +1,13 @@
 <Project>
- 
+
   <PropertyGroup>
     <Authors>Aprismatic</Authors>
     <Company>Aprismatic</Company>
     <Copyright>(c) Aprismatic Pte. Ltd. All rights reserved.</Copyright>
     <Version>0.0.0.0</Version>
+    <PackageProjectUrl>https://github.com/aprismatic/weave-commons</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/aprismatic/weave-commons.git</RepositoryUrl>
   </PropertyGroup>
- 
+
 </Project>
