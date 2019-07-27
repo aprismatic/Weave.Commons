@@ -2,19 +2,19 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/p87ij8921enurk50/branch/master?svg=true)](https://ci.appveyor.com/project/bazzilic/weave-commons/branch/master)
 
-The `Weave.Commons` project contains basic models for WEAVE, as well as the plugin interface to process datasets in the authority node.
+The `Weave.Commons` project contains basic models for WEAVE, as well as the plugin interface to process and store datasets in the authority node.
 
 NuGet Feed: `https://ci.appveyor.com/nuget/aprismatic-weave-commons`
 
-## IWeaveDatasetPlugin
+## IDatasetStore
 
-The `IWeaveDatasetPlugin` interface defines the following methods:
+The `IDatasetStore` interface defines the following methods:
 
 * `LoadConfig(IConfiguration configuration)`
 This method receives all configuration parameters, and is called on WEAVE authority node startup.
 
 * `DatasetReady(Dataset dataset)`
-This method receives a submitted dataset, and is called whenever a dataset is ready (tokenized and joined).
+This method receives a submitted dataset for storage, and is called whenever a dataset is ready (tokenized and joined).
 
 * `UpdateDatasets(byte[] updateKey, byte[] publicKey)`
 This method gets an update key and public key, to update all datasets in your own data store. It is called whenever datasets needs to be updated due to key changes.
@@ -23,7 +23,7 @@ The `updateKey` and `publicKey` parameters are `BigInteger` values represented b
 ### Usage Example
 
 ```csharp
-public class CustomDatasetPlugin : IWeaveDatasetPlugin
+public class CustomDatasetPlugin : IDatasetStore
 {
     public void LoadConfig(IConfiguration configuration)
     {

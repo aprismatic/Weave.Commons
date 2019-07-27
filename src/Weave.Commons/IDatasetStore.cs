@@ -5,10 +5,10 @@ namespace Weave.Commons
 {
     /// <summary>
     /// Interface for WEAVE authority node plugins.
-    /// Plugins can be developed to automatically process datasets when submitted,
+    /// Plugins can be developed to process and store datasets when submitted,
     /// as well as update datasets in a data store.
     /// </summary>
-    public interface IWeaveDatasetPlugin
+    public interface IDatasetStore
     {
         /// <summary>
         /// Receives all configuration parameters.
