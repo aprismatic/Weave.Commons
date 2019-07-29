@@ -37,7 +37,7 @@ public class CustomDatasetPlugin : IDatasetStore
 
     public void UpdateDatasets(byte[] updateKey, byte[] publicKey)
     {
-        var newToken = BigInteger.ModPow(new BigInteger(oldValue), new BigInteger(SecretKey), new BigInteger(PublicKey));
+        var newToken = BigInteger.ModPow(new BigInteger(oldValue), new BigInteger(updateKey), new BigInteger(publicKey));
     }
 }
 ```
