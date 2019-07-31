@@ -33,6 +33,14 @@ namespace Weave.Commons.Models
         public bool Tokenize { get; set; }
 
         /// <summary>
+        /// Metadata of the <see cref="Column"/>.
+        /// <para/>Will not be processed by WEAVE.
+        /// <para/>Can be any datatype or structure. <see cref="String"/> is recommended for compatibility.
+        /// </summary>
+        [DataMember(Order = 2)]
+        public object Metadata { get; set; }
+
+        /// <summary>
         /// Creates a new <see cref="Column"/> that is a deep copy of the current <see cref="Column"/>.
         /// </summary>
         public virtual object Clone()
@@ -40,7 +48,8 @@ namespace Weave.Commons.Models
             return new Column()
             {
                 ColumnName = ColumnName,
-                Tokenize = Tokenize
+                Tokenize = Tokenize,
+                Metadata = Metadata
             };
         }
     }
