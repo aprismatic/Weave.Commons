@@ -30,7 +30,7 @@ public class CustomDatasetPlugin : IDatasetStore
         var customConfig = configuration["CUSTOM_CONFIG"];
     }
 
-    public async void DatasetReady(Dataset dataset)
+    public void DatasetReady(Dataset dataset)
     {
         Console.WriteLine($"Dataset received: {dataset.DatasetName}");
     }
