@@ -38,7 +38,7 @@ namespace Weave.Commons.Models
         /// <para/>Can be any datatype or structure. <see cref="String"/> is recommended for compatibility.
         /// </summary>
         [DataMember(Order = 2)]
-        public object Metadata { get; set; }
+        public object ColumnMetadata { get; set; }
 
         /// <summary>
         /// Creates a new <see cref="Column"/> that is a deep copy of the current <see cref="Column"/>.
@@ -49,7 +49,7 @@ namespace Weave.Commons.Models
             {
                 ColumnName = ColumnName,
                 Tokenize = Tokenize,
-                Metadata = Metadata
+                ColumnMetadata = ColumnMetadata
             };
         }
     }

@@ -17,6 +17,14 @@ namespace Weave.Commons.Models
         public string DatasetName { get; set; }
 
         /// <summary>
+        /// Metadata of the <see cref="Dataset"/>.
+        /// <para/>Will not be processed by WEAVE.
+        /// <para/>Can be any datatype or structure. <see cref="String"/> is recommended for compatibility.
+        /// </summary>
+        [DataMember(Order = 11)]
+        public object DatasetMetadata { get; set; }
+
+        /// <summary>
         /// Creates a new object that is a copy of the current instance.
         /// </summary>
         public abstract object Clone();

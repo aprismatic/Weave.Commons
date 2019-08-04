@@ -47,7 +47,8 @@ namespace Weave.Commons.Models
         {
             var res = new Dataset()
             {
-                DatasetName = DatasetName
+                DatasetName = DatasetName,
+                DatasetMetadata = DatasetMetadata
             };
 
             foreach (var col in Columns)
