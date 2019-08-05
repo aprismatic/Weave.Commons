@@ -14,18 +14,31 @@ namespace Weave.Commons
         /// Receives all configuration parameters.
         /// Called on WEAVE authority node startup.
         /// </summary>
-        void LoadConfig(IConfiguration configuration);
+        /// <param name="configuration">Application configuration properties.</param>
+        /// <returns>
+        /// Whether function completed successfully.
+        /// </returns>
+        bool LoadConfig(IConfiguration configuration);
 
         /// <summary>
         /// Receives a submitted dataset.
         /// Called whenever a dataset is ready (tokenized and joined).
         /// </summary>
-        void DatasetReady(Dataset dataset);
+        /// <param name="dataset">Ready tokenized dataset.</param>
+        /// <returns>
+        /// Whether function completed successfully.
+        /// </returns>
+        bool DatasetReady(Dataset dataset);
 
         /// <summary>
         /// Gets an update key and public key to update all datasets in data store.
         /// Called whenever datasets needs to be updated due to key changes.
         /// </summary>
-        void UpdateDatasets(byte[] updateKey, byte[] publicKey);
+        /// <param name="updateKey">Update key to update datasets with.</param>
+        /// <param name="publicKey">Public key to update datasets with.</param>
+        /// <returns>
+        /// Whether function completed successfully.
+        /// </returns>
+        bool UpdateDatasets(byte[] updateKey, byte[] publicKey);
     }
 }

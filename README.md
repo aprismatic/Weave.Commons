@@ -25,19 +25,22 @@ The `updateKey` and `publicKey` parameters are `BigInteger` values represented b
 ```csharp
 public class CustomDatasetPlugin : IDatasetStore
 {
-    public void LoadConfig(IConfiguration configuration)
+    public bool LoadConfig(IConfiguration configuration)
     {
         var customConfig = configuration["CUSTOM_CONFIG"];
+		return true;
     }
 
-    public void DatasetReady(Dataset dataset)
+    public bool DatasetReady(Dataset dataset)
     {
         Console.WriteLine($"Dataset received: {dataset.DatasetName}");
+		return true;
     }
 
-    public void UpdateDatasets(byte[] updateKey, byte[] publicKey)
+    public bool UpdateDatasets(byte[] updateKey, byte[] publicKey)
     {
         var newToken = BigInteger.ModPow(new BigInteger(oldValue), new BigInteger(updateKey), new BigInteger(publicKey));
+		return true;
     }
 }
 ```
