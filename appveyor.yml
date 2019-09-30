@@ -11,7 +11,7 @@ branches:
 
 skip_tags: true
 
-image: "Visual Studio 2017"
+image: "Visual Studio 2019"
 
 configuration: Release
 
@@ -24,5 +24,4 @@ build:
   verbosity: minimal
 
 before_build:
-  - nuget update -self
-  - nuget restore
+  - nuget restore -verbosity quiet
